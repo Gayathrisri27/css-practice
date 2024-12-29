@@ -1,0 +1,287 @@
+//html 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector University - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Vector University</h1>
+            </div>
+            <nav class="navbar">
+                <a href="home.html" class="active">Home</a>
+                <a href="certificates.html">Certificates</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h2>Empowering Learning Beyond Limits</h2>
+                    <p>Discover world-class online courses, certifications, and mock tests tailored for your success.</p>
+                    <a href="aboutus.html" class="cta-button">Explore More</a>
+                </div>
+                <div class="hero-image">
+                    <img src="online-learning.svg" alt="Online Learning">
+                </div>
+            </div>
+        </section>
+        <section class="courses">
+            <div class="container">
+                <h2>Popular Courses</h2>
+                <div class="course-grid">
+                    <div class="course-card">
+                        <img src="data-science.jpg" alt="Data Science">
+                        <h3>Data Science</h3>
+                        <p>Master data analysis, visualization, and machine learning techniques.</p>
+                    </div>
+                    <div class="course-card">
+                        <img src="cybersecurity.jpg" alt="Cybersecurity">
+                        <h3>Cybersecurity</h3>
+                        <p>Learn to protect digital assets with cutting-edge security training.</p>
+                    </div>
+                    <div class="course-card">
+                        <img src="ai.jpg" alt="Artificial Intelligence">
+                        <h3>Artificial Intelligence</h3>
+                        <p>Build innovative solutions with AI and machine learning expertise.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <p>Have questions? Reach out to us for more information.</p>
+                <form action="#" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Vector University. All Rights Reserved.</p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+        </div>
+    </footer>
+</body>
+</html>
+//css
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: #f8f9fa;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+.header {
+    background: #00457c;
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo h1 {
+    font-size: 1.8rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #ffd700;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 0;
+    background: linear-gradient(to right, #00457c, #0073e6);
+    color: #fff;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    margin-bottom: 2rem;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #ffd700;
+    color: #00457c;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background: #ffc107;
+    transform: translateY(-3px);
+}
+
+/* Courses Section */
+.courses {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.courses h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #00457c;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.course-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+.course-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.course-card h3 {
+    color: #00457c;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.course-card p {
+    padding: 0 1rem 1rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Contact Section */
+.contact {
+    background: #f4f4f4;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00457c;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    background: #00457c;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #0056a3;
+}
+
+/* Footer */
+.footer {
+    background: #00457c;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
